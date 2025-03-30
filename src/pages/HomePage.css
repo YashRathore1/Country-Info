@@ -17,7 +17,7 @@
     align-items: center;
     background-color: rgba(19, 19, 19, 0.61); /* Dark overlay */
     background-blend-mode: overlay; /* Options: multiply, screen, overlay */
-    background-image: url('../public/high-resolution-world-map-silver-country-outlines-isefibdgcuhgz90y.jpg');
+    background-image: url('/high-resolution-world-map-silver-country-outlines-isefibdgcuhgz90y.jpg');
     background-size: cover;
 }
 

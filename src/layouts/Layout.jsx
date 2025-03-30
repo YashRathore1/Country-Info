@@ -16,7 +16,7 @@ export default function Layout() {
         <div className="header-content">
           <div className="heading">
             <div className="brand-name">
-              <img src='/public/Untitled design.png' alt="" className='logo'/>
+              <img src='/Untitled design.png' alt="" className='logo'/>
               <h1>Country Info</h1>
             </div>
           </div>
