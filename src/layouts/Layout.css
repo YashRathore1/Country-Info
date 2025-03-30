@@ -1,0 +1,103 @@
+:root{
+  --bg: #131313;
+  --white: white;
+  --greyWhite: #cbcbd0ef;
+  --darkgray: #06062d;
+  --border: #3f3d3d; 
+}
+
+  header{
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 5px;
+  } 
+  
+  header > div{
+    display: flex;
+    overflow: hidden;
+    padding: 5px; 
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .brand-name h1{
+    font-size: 30px;
+    margin: 0;
+    margin-left: 5px;
+  }
+
+  .brand-name{
+    display: flex;
+    align-items: center;
+  }
+  
+  .brand-name .logo{
+    height: 40px;
+    width: 40px
+    /* animation: rotate 5s linear infinite; */
+  }
+
+  /* @keyframes rotate {
+    from {
+      transform: rotateZ(0deg);
+    }
+    to {
+      transform: rotateZ(360deg);
+    }
+  } */
+  
+  .navigation{
+    display: flex;
+    align-items: center;
+  }
+
+  .navigation a{
+    display: block;
+    padding: 0px 10px;
+    /* margin: 5px; */
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--greyWhite);
+    transition: color 0.3s ease;
+  }
+  
+  .navigation a:hover{
+    color: var(--white);  
+  }
+
+  main{
+    width: 100vw;
+    margin: auto;
+  }
+
+  .content{
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+  }
+
+  .navigation .navLink.active{
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .navigation .login-or-signup{
+    background: var(--greyWhite); 
+    margin-left: 10px;
+    color: var(--white) ;
+    font-weight: 500 ;
+    padding: 2px 10px;
+  }
+
+  .navigation .login-or-signup:hover{
+    background: var(--white);
+    color: var(--border);
+  }

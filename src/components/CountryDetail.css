@@ -1,0 +1,46 @@
+:root{
+    --bg: #131313;
+    --white: white;
+    --greyWhite: #999999;
+    --text: #cbcbd0ef;
+    /* --card: #13131384; */
+    --card: #13131384;
+    --border: #3f3d3d; 
+  }
+
+.countryDetail{
+    background: var(--card);
+    display: flex;
+    max-width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+    /* justify-content: space-between; */
+    align-items: baseline;
+    /* border: 1px solid var(--border); */
+    box-shadow: inset 0 0 5px 0px var(--border);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.country{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.country h2, .about h3{
+    margin: 18px 0;
+}
+
+.flag{
+    aspect-ratio: 3 / 2;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.about a{
+    color: var(--white);
+}

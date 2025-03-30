@@ -1,0 +1,113 @@
+:root{
+    --bg: #131313;
+    --white: white;
+    --greyWhite: #999999;
+    --text: #cbcbd0ef;
+    --darkgray: #06062d;
+    --border: #3f3d3d; 
+  }
+
+.flagsLayout{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.sortAndData{
+    display: flex;
+    flex-flow: column;
+    width: 700px;
+    flex-grow: 1;
+}
+
+.filter{
+    display: flex;
+    flex-flow: column;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    height: 550px;
+}
+
+.sort{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 10px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px 0px var(--border);
+    align-items: baseline;
+}
+
+.sort .buttonContainer{
+    flex-grow: 1;
+    border-right: 1px solid var(--border);
+}
+
+.buttonContainer:last-child{
+    border: none;
+}
+
+.sort button{
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: auto;
+    padding: 4px 14px;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--greyWhite);
+    transition: color 0.5s ease;
+
+}
+
+.sort button:hover{
+    color: var(--white);
+}
+
+.sortBy{
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--greyWhite);
+}
+
+.filter > div{
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.filterParticular{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--greyWhite);
+    margin-bottom: 7px;
+}
+
+.filterData{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+
+.listItems{
+    list-style: none;
+    cursor: pointer;
+    border-left: 1px solid var(--border);
+    padding: 4px 10px;
+    font-size: 14px;
+    color: var(--greyWhite);
+    transition: color 0.5s ease;
+    transition: border 0.5s ease;
+}
+
+.listItems:hover{
+    color: var(--white);
+    border-color: var(--white);
+}
+
+/* .renderedData h1, .renderedData p{
+    margin: 10px 0;
+    color: var(--text);
+} */

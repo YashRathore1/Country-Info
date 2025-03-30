@@ -1,0 +1,115 @@
+:root{
+    --bg: #333333;
+    --txt: rgb(168, 162, 162);
+    --border: rgb(168, 162, 162); 
+
+  }
+
+.login-overlay{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(19, 19, 19, 0.727); /* Dark overlay */
+    background-blend-mode: overlay;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form{
+    width: 230px;
+    box-shadow: 0px 0px 20px 10px black;
+    height: auto;
+    padding: 70px 30px;
+    background: #333333;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    color: var(--txt);
+    position: relative;
+}
+
+.close-button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    max-width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 100%;
+}
+
+.close-button span{
+    margin: auto auto;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+form{
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+}
+
+form label{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid var(--greyWhite);
+}
+
+form label > input {
+    background: none;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+form label > input:focus{
+    border: none;
+    outline: none;
+}
+
+.login-heading{
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.forgot-password{
+    margin-left: auto;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--txt)
+}
+
+.submit-button{
+    margin-top: 6px !important;
+    padding: 6px 25px;
+    margin: auto;
+    width: fit-content;
+    font-size: 15px;
+    border: 2px solid var(--txt);
+    background: none;
+    font-weight: 600;
+    color: var(--txt);
+    text-transform: uppercase;
+}
+
+.create-account{
+    margin: auto;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.create-account a{
+    color: var(--txt);
+}
