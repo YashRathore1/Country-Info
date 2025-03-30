@@ -1,7 +1,7 @@
 import './App.css'
 import Layout from './layouts/Layout'
 import {createBrowserRouter, NavLink, Route, RouterProvider, createRoutesFromElements} from 'react-router-dom'
-import Flags, { flagData } from './pages/flags'
+import Flags, { flagData } from './pages/Flags'
 import CountryDetail, { countryData } from './components/CountryDetail'
 import FlagsLayout from './layouts/FlagsLayout'
 import HomePage from './pages/HomePage'
