@@ -5,19 +5,41 @@ import { useEffect } from 'react';
 
 export default function Flags() {
     const countryData = useLoaderData({})
-    const listRef = useRef();
-    // console.log(listRef.current)
+    // const imgAddress = useRef([]);
+    const imgRef = useRef([]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.setAttribute("src", img.dataset.source)
+                }
+            });
+        }, {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.5
+        });
+
+        imgRef.current.forEach(img => {
+            observer.observe(img);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
         <>
             <div className='info'>
                 <h1>Countries Page</h1>
                 <p>You can find information about all the counties here.</p>
             </div>
-            <div ref={listRef} className="countryList">
+            <div className="countryList">
                 {countryData.map((data, index) => {
                     return(
                         <Link to={data.name.common} key={index} className='FlagsCard'>
-                            <img src={data.flags.png} alt="Flags of Countries" className='countryFlag' loading='lazy' />
+                            <img data-source={data.flags.png} src="/public/lazy-loading.png" alt="Flags of Countries" className='countryFlag' ref={(el)=> imgRef.current[index] = el} />
                             <div className="countryName">{data.name.common}</div>
                         </Link>
                     )
