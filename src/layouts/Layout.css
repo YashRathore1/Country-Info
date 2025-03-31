@@ -89,15 +89,22 @@
     font-weight: 500;
   }
 
-  .navigation .login-or-signup{
-    background: var(--greyWhite); 
-    margin-left: 10px;
-    color: var(--white) ;
-    font-weight: 500 ;
-    padding: 2px 10px;
+  .navigation .login{
+    background: var(--white); 
+    font-size: 16px ;
+    margin-left: 8px;
+    color: var(--darkgray) ;
+    font-weight: 500;
+    /* border: 1px solid var(--border); */
+    padding: 5px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
   }
 
-  .navigation .login-or-signup:hover{
-    background: var(--white);
-    color: var(--border);
+  .navigation .login:hover{
+    /* transform: scale(1.03, 1.03); */
+    box-shadow: 0px 0px 5px var(--white);
   }
+ 

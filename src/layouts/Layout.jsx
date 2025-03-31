@@ -7,8 +7,9 @@ export default function Layout() {
   const [login, setLogin] = useState(false);
 
   const showLogin = () => {
-    setLogin(true)
+    setLogin(true);
   }
+
 
   return (
     <>
@@ -33,7 +34,7 @@ export default function Layout() {
         <div className="content">
           <Outlet />
         </div>
-        {login && <Login setLogin={setLogin}/>}
+        {login && <Login setLogin={setLogin} login={login}/>}
       </main>
     </>
   )

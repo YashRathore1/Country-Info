@@ -1,15 +1,23 @@
+import { useEffect, useRef } from 'react'
 import './Login.css'
 import ReactDom from 'react-dom/client'
 import {Link} from 'react-router-dom'
-export default function Login({setLogin}) {
+export default function Login({setLogin, login}) {
     
     const closeLogin = ()=>{
         setLogin(false)
     }
+    
+    const loginRef = useRef(null);
+    useEffect(()=>{
+        if(login){
+            loginRef.current.focus()
+        }
+    }, [login])
 
   return (
-    <div className="login-overlay">
-        <div className="login-form">
+    <div className="login-overlay" onClick={closeLogin}>
+        <div className="login-form" onClick={(e)=>{e.stopPropagation()}}>
             <button className='close-button' onClick={closeLogin}>
             <span class="material-symbols-outlined">close</span>
             </button>
@@ -17,7 +25,7 @@ export default function Login({setLogin}) {
                 <h1 className='login-heading'>Sign in</h1>
                 <label> 
                   <span className="material-symbols-outlined">mail</span>                    
-                  <input type="email" placeholder='Enter your email' required />
+                  <input ref={loginRef} type="email" placeholder='Enter your email' required />
                 </label>
 
                 <label> 
