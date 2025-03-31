@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 
 export default function Flags() {
     const countryData = useLoaderData({})
-    // const imgAddress = useRef([]);
     const imgRef = useRef([]);
 
     useEffect(() => {
@@ -19,14 +18,16 @@ export default function Flags() {
         }, {
             root: null,
             rootMargin: "0px",
-            threshold: 0.5
+            threshold: 0.1
         });
 
         imgRef.current.forEach(img => {
             observer.observe(img);
         });
 
-        return () => observer.disconnect();
+        return () => {
+            return observer.disconnect();
+        }
     }, []);
 
     return (
@@ -50,7 +51,6 @@ export default function Flags() {
 }
 
 // Loader Function
-
 export const flagData = async() => {
     const res = await fetch('https://restcountries.com/v3.1/all?fields=name,flags')
     return res.json()
