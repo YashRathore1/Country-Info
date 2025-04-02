@@ -37,11 +37,11 @@ export default function Flags() {
                 <p>You can find information about all the counties here.</p>
             </div>
             <div className="countryList">
-                {countryData.map((data, index) => {
+                {Array.isArray(countryData) && countryData.map((data, index) => {
                     return(
-                        <Link to={data.name.common} key={index} className='FlagsCard'>
-                            <img data-source={data.flags.png} src="/public/lazy-loading.png" alt="Flags of Countries" className='countryFlag' ref={(el)=> imgRef.current[index] = el} />
-                            <div className="countryName">{data.name.common}</div>
+                        <Link to={data?.name.common} key={index} className='FlagsCard'>
+                            <img data-source={data?.flags.png} src="/public/lazy-loading.png" alt="Flags of Countries" className='countryFlag' ref={(el)=> imgRef.current[index] = el} />
+                            <div className="countryName">{data?.name.common}</div>
                         </Link>
                     )
                 })}                

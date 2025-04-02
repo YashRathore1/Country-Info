@@ -1,0 +1,102 @@
+[
+  {
+    "name": "India",
+    "clues": [
+      "This country is home to the Taj Mahal, one of the Seven Wonders of the World.",
+      "It is known for its diverse cultures, festivals, and spicy food.",
+      "It has the second-largest population in the world."
+    ],
+    "famous_for": "Bollywood, Yoga, and Cricket",
+    "options": ["India", "China", "Brazil", "Russia"]
+  },
+  {
+    "name": "Japan",
+    "clues": [
+      "This country is famous for its cherry blossoms and Mount Fuji.",
+      "It is known for producing high-quality technology and anime.",
+      "Its capital city, Tokyo, is one of the most populated cities in the world."
+    ],
+    "famous_for": "Sushi, Samurai, and Bullet Trains",
+    "options": ["South Korea", "Japan", "Thailand", "Vietnam"]
+  },
+  {
+    "name": "Brazil",
+    "clues": [
+      "This country is home to the Amazon Rainforest.",
+      "It has won the FIFA World Cup a record number of times.",
+      "It celebrates one of the biggest carnivals in the world."
+    ],
+    "famous_for": "Football, Samba, and the Christ the Redeemer statue",
+    "options": ["Argentina", "Brazil", "Mexico", "Colombia"]
+  },
+  {
+    "name": "France",
+    "clues": [
+      "This country is home to the Eiffel Tower and the Louvre Museum.",
+      "It is known for its fashion industry and gourmet cuisine.",
+      "It hosts the famous Tour de France cycling race."
+    ],
+    "famous_for": "Wine, Perfumes, and the French Revolution",
+    "options": ["Italy", "France", "Germany", "Spain"]
+  },
+  {
+    "name": "Australia",
+    "clues": [
+      "This country is home to the Great Barrier Reef.",
+      "It has unique animals like kangaroos and koalas.",
+      "It has a famous opera house in its largest city."
+    ],
+    "famous_for": "Beaches, Cricket, and Wildlife",
+    "options": ["New Zealand", "Australia", "South Africa", "Canada"]
+  },
+  {
+    "name": "Egypt",
+    "clues": [
+      "This country is home to one of the Seven Wonders of the Ancient World.",
+      "It is known for its ancient civilization and pyramids.",
+      "The Nile River, the longest river in the world, flows through it."
+    ],
+    "famous_for": "Pharaohs, Hieroglyphs, and Mummies",
+    "options": ["Greece", "Turkey", "Egypt", "Saudi Arabia"]
+  },
+  {
+    "name": "Canada",
+    "clues": [
+      "This country is the second-largest in the world by land area.",
+      "It is famous for maple syrup and ice hockey.",
+      "It has beautiful national parks and the Niagara Falls."
+    ],
+    "famous_for": "Politeness, Cold Weather, and Multiculturalism",
+    "options": ["USA", "Canada", "Russia", "Norway"]
+  },
+  {
+    "name": "Germany",
+    "clues": [
+      "This country is known for its engineering and automobile industry.",
+      "It is famous for Oktoberfest and sausages.",
+      "Its capital city, Berlin, was once divided by a famous wall."
+    ],
+    "famous_for": "Cars, Beer, and Castles",
+    "options": ["Germany", "Netherlands", "Switzerland", "Belgium"]
+  },
+  {
+    "name": "China",
+    "clues": [
+      "This country has the Great Wall, one of the longest structures in the world.",
+      "It has the highest population in the world.",
+      "It is known for its ancient traditions and modern cities like Shanghai."
+    ],
+    "famous_for": "Kung Fu, Pandas, and the Forbidden City",
+    "options": ["China", "Japan", "India", "South Korea"]
+  },
+  {
+    "name": "United Kingdom",
+    "clues": [
+      "This country is home to the world's most famous royal family.",
+      "It has Big Ben, Buckingham Palace, and the River Thames.",
+      "Its capital city hosted the Olympics three times."
+    ],
+    "famous_for": "Shakespeare, Tea, and Football",
+    "options": ["USA", "United Kingdom", "Ireland", "France"]
+  }
+]
