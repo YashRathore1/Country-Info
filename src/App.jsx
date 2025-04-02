@@ -5,8 +5,7 @@ import Flags, { flagData } from './pages/Flags'
 import CountryDetail, { countryData } from './components/CountryDetail'
 import FlagsLayout from './layouts/FlagsLayout'
 import HomePage from './pages/HomePage'
-import Login from './components/Login'
-import About from './pages/About'
+import Quiz from './pages/Quiz/Quiz'
 
 
 function App() {
@@ -14,7 +13,7 @@ function App() {
     createRoutesFromElements(
       <Route path='/' element={<Layout /> }>
         <Route index element={<HomePage />} />
-        <Route path="/about" element={<About/>}/>
+        <Route path="/play-quiz" element={<Quiz />}/>
         <Route path='/countries' element={<FlagsLayout />}>
           <Route index element={<Flags />} loader={flagData} />
           <Route path=':id' loader={countryData} element={<CountryDetail  />} />
