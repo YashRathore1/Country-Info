@@ -15,7 +15,7 @@ export default function QuizCard({ index, quizDetails, nextQuestion, evalAnswer,
                 id={option}
                 name="quiz"
                 value={option}
-                // ref={()=>{optionRef.current[i]}}
+                // ref={()git st=>{optionRef.current[i]}}
                 onChange={(e) => evalAnswer(index, quizDetails[index]?.name, e.target.value)}
               />
               <label htmlFor={option}>
