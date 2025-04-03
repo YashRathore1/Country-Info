@@ -1,7 +1,8 @@
 import './Quiz.css'
 import { useRef, useState } from 'react';
-import useFetchAPI from '../../hooks/useFetchAPI';
-import QuizCard from '../../components/QuizCard';
+import useFetchAPI from '../../Custom Hooks/useFetchAPI';
+import QuizCard from '../../Components/QuizCard/QuizCard';
+
 
 export default function Quiz() {
   const {data: quizDetails, isLoading} = useFetchAPI('/db.json'); 

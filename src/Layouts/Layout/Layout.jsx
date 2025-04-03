@@ -1,7 +1,7 @@
 import { NavLink, Outlet } from 'react-router'
 import './Layout.css'
 import { useEffect, useRef, useState } from 'react'
-import Login from '../components/Login'
+import Login from '../../Components/Login/Login';
 
 export default function Layout() {
   const [login, setLogin] = useState(false);

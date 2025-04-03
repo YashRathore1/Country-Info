@@ -1,14 +1,12 @@
 import { useEffect, useRef } from 'react'
 import './Login.css'
-import ReactDom from 'react-dom/client'
 import {Link} from 'react-router-dom'
-export default function Login({setLogin, login}) {
 
+export default function Login({setLogin, login}) {
     const loginFormRef = useRef()
     const closeLogin = ()=>{
         setLogin(false)
     }
-
     const closeModal = (e)=>{
         if(e.target.contains(loginFormRef.current) && e.target !== loginFormRef.current){
             setLogin(false)

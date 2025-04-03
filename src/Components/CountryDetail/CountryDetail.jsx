@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router"
 import './CountryDetail.css'
 
+
 export default function CountryDetail() {
   const { id } = useParams()
   const country = useLoaderData()

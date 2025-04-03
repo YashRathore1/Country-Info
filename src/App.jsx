@@ -1,11 +1,12 @@
 import './App.css'
-import Layout from './layouts/Layout'
 import {createBrowserRouter, NavLink, Route, RouterProvider, createRoutesFromElements} from 'react-router-dom'
-import Flags, { flagData } from './pages/Flags'
-import CountryDetail, { countryData } from './components/CountryDetail'
-import FlagsLayout from './layouts/FlagsLayout'
-import HomePage from './pages/HomePage'
-import Quiz from './pages/Quiz/Quiz'
+import Layout from './Layouts/Layout/Layout';
+import Flags, { flagData } from './Pages/Flags/Flags';
+import CountryDetail, { countryData } from './Components/CountryDetail/CountryDetail';
+import FlagsLayout from './Layouts/FlagsLayout/FlagsLayout';
+import HomePage from './Pages/Homepage/HomePage';
+import Quiz from './Pages/Quiz/Quiz';
+
 
 
 function App() {
