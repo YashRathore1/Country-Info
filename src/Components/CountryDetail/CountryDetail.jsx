@@ -5,7 +5,6 @@ import './CountryDetail.css'
 export default function CountryDetail() {
   const { id } = useParams()
   const country = useLoaderData()
-  console.log(country)
   if(Array.isArray(country)){
     return (
       <div className="countryDetail">

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Link, useLoaderData } from 'react-router'
-import './Flags.css'
+import './Flag.css'
 import { useEffect } from 'react';
 
 export default function Flags() {
