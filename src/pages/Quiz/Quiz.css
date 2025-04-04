@@ -138,3 +138,21 @@
     justify-content: center;
     margin-top: 25px;
 }
+
+
+.option-container label {
+    color: black;
+    cursor: pointer;
+  }
+  
+  /* style when selected */
+  .option-container input[type="radio"]:checked + label {
+    color: var(--optionHov);
+    font-weight: bold;
+  }
+
+  .score{
+    margin: auto;
+    font-size: 20px;
+    margin-top: 10px;
+  }

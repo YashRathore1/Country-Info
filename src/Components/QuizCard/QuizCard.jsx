@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function QuizCard({ index, quizDetails, nextQuestion, evalAnswer, optionRef }) {
+export default function QuizCard({ index, quizDetails, nextQuestion, evalAnswer }) {
   return (
     <div className="quiz-card">
       <div className="question">
@@ -18,7 +18,7 @@ export default function QuizCard({ index, quizDetails, nextQuestion, evalAnswer,
                 // ref={()git st=>{optionRef.current[i]}}
                 onChange={(e) => evalAnswer(index, quizDetails[index]?.name, e.target.value)}
               />
-              <label htmlFor={option}>
+              <label htmlFor={option} >
                 {`(${String.fromCharCode(65 + i)}) ${option}`}
               </label>
             </div>

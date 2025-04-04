@@ -7,8 +7,6 @@ import HomePage from './Pages/Homepage/HomePage';
 import Quiz from './Pages/Quiz/Quiz';
 import Layout from './Layouts/Root/Layout';
 
-
-
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -23,7 +21,6 @@ function App() {
       </Route>
     )
   )
-
   return (
     <>
       <RouterProvider router={router} />
@@ -32,6 +29,3 @@ function App() {
 }
 
 export default App
-
-
-// On line 10, loader has been used as a prop.
