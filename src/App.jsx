@@ -1,6 +1,6 @@
 import './App.css'
 import {createBrowserRouter, NavLink, Route, RouterProvider, createRoutesFromElements} from 'react-router-dom'
-import Flags, { flagData } from './Pages/Flags/temp';
+import Flag, { flagData } from './Pages/Flags/Flag';
 import CountryDetail, { countryData } from './Components/CountryDetail/CountryDetail';
 import FlagsLayout from './Layouts/FlagsLayout/FlagsLayout';
 import HomePage from './Pages/Homepage/HomePage';
@@ -14,7 +14,7 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="/play-quiz" element={<Quiz />}/>
         <Route path='/countries' element={<FlagsLayout />}>
-          <Route index element={<Flags />} loader={flagData} />
+          <Route index element={<Flag />} loader={flagData} />
           <Route path=':id' loader={countryData} element={<CountryDetail  />} />
         </Route>
         <Route path='*'/>

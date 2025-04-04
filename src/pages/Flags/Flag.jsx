@@ -3,7 +3,7 @@ import { Link, useLoaderData } from 'react-router'
 import './Flag.css'
 import { useEffect } from 'react';
 
-export default function Flags() {
+export default function Flag() {
     const countryData = useLoaderData({})
     const imgRef = useRef([]);
 
