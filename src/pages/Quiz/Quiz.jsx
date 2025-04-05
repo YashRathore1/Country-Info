@@ -2,13 +2,14 @@ import './Quiz.css'
 import { useRef, useState } from 'react';
 import useFetchAPI from '../../Custom Hooks/useFetchAPI';
 import QuizCard from '../../Components/QuizCard/QuizCard';
+import { QuizContext } from '../Context/QuizContext';
 
 export default function Quiz() {
   const {data: quizDetails, isLoading} = useFetchAPI('/db.json'); 
   const [score, setScore] = useState(0);
   const [ind, setInd] = useState(0);
   const [trackAnswer, setTrackAnswer] = useState([])
-
+  
   const evalAnswer = (index, name, value, nextQuestion) => {
     const newData = {
       key: index + 1,
@@ -52,22 +53,24 @@ export default function Quiz() {
     setInd(0)
   }
   return (
-    <div className="quiz-page">
-      <div className="heading-container">
-        <h1 className='heading'>Play the Quiz to test your knowledge!</h1>
-      </div>
-      <div className="quiz-container">
-        <QuizCard index={ind} quizDetails={quizDetails} nextQuestion={nextQuestion} evalAnswer={evalAnswer} />
-        <div className="submit-reset-buttons">
-          <button type="submit" className='submit-quiz' onClick={(e) => calcScore()}> SUBMIT </button>
-          <button type="reset" className='reset-quiz' onClick={(e) => {resetQuiz()}}> RESET </button>
+    <QuizContext.Provider value={{ind, quizDetails, nextQuestion, evalAnswer}}>
+      <div className="quiz-page">
+        <div className="heading-container">
+          <h1 className='heading'>Play the Quiz to test your knowledge!</h1>
         </div>
+        <div className="quiz-container">
+          <QuizCard />
+          <div className="submit-reset-buttons">
+            <button type="submit" className='submit-quiz' onClick={(e) => calcScore()}> SUBMIT </button>
+            <button type="reset" className='reset-quiz' onClick={(e) => {resetQuiz()}}> RESET </button>
+          </div>
 
-        <div className="score">
-          User Score: {score}
+          <div className="score">
+            User Score: {score}
+          </div>
         </div>
       </div>
-    </div>
+    </QuizContext.Provider>
   )
 }
 

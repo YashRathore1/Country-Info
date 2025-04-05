@@ -1,22 +1,23 @@
-import React from 'react';
+import { useContext } from "react";
+import { QuizContext } from "../../Pages/Context/QuizContext";
 
-export default function QuizCard({ index, quizDetails, nextQuestion, evalAnswer }) {
+export default function QuizCard() {
+  const QuizObj = useContext(QuizContext)
   return (
     <div className="quiz-card">
       <div className="question">
-        <span className="quiz-question">{quizDetails[index]?.clues[0]}</span>
+        <span className="quiz-question">{QuizObj.quizDetails[QuizObj.ind]?.clues[0]}</span>
       </div>
       <div className="options">
         <form>
-          {quizDetails[index]?.options.map((option, i) => (
+          {QuizObj.quizDetails[QuizObj.ind]?.options.map((option, i) => (
             <div className="option-container" key={option}>
               <input
                 type="radio"
                 id={option}
                 name="quiz"
-                value={option}
-                // ref={()git st=>{optionRef.current[i]}}
-                onChange={(e) => evalAnswer(index, quizDetails[index]?.name, e.target.value)}
+                QuizObj={option}
+                onChange={(e) => QuizObj.evalAnswer(QuizObj.ind, QuizObj.quizDetails[QuizObj.ind]?.name, e.target.QuizObj)}
               />
               <label htmlFor={option} >
                 {`(${String.fromCharCode(65 + i)}) ${option}`}
@@ -25,85 +26,9 @@ export default function QuizCard({ index, quizDetails, nextQuestion, evalAnswer 
           ))}
         </form>
       </div>
-      <button className="next-button" onClick={() => nextQuestion(index, quizDetails)}>
+      <button className="next-button" onClick={() => QuizObj.nextQuestion(QuizObj.ind, QuizObj.quizDetails)}>
         Next &gt;
       </button>
     </div>
   );
 }
-
-
-
-// import React from 'react'
-
-// export default function QuizCard({index, quizDetails, nextQuestion, evalAnswer}) {
-//   return (
-//     <div className="quiz-card">
-//         <div className="question"> 
-//              <span className='quiz-question'>{quizDetails[index]?.clues[0]}</span>
-//         </div>
-//         <div className="options">
-//             <form action="">
-//                 <div className="option-container">
-//                     <input 
-//                         type="radio" 
-//                         id={quizDetails[index]?.options[0]} 
-//                         name="quiz" 
-//                         value={quizDetails[index]?.options[0]}
-//                     />
-
-//                     <label htmlFor={quizDetails[index]?.options[0]}
-//                     onClick={(e) => {evalAnswer(index, quizDetails[index]?.name, e.target.htmlFor)}}>
-//                         {'(A) '+ quizDetails[index]?.options[0]}
-//                     </label>
-//                 </div>
-
-//                 <div className="option-container">
-//                     <input 
-//                         type="radio" 
-//                         id={quizDetails[index]?.options[1]} 
-//                         name="quiz" 
-//                         value={quizDetails[index]?.options[1]} 
-//                     />
-
-//                     <label htmlFor={quizDetails[index]?.options[1]} 
-//                         onClick={(e) => {evalAnswer(index, quizDetails[index]?.name, e.target.htmlFor)}}>
-//                         {'(B) '+ quizDetails[index]?.options[1]}
-//                     </label>
-//                 </div>
-
-//                 <div className="option-container">
-//                     <input 
-//                         type="radio" 
-//                         id={quizDetails[index]?.options[2]} 
-//                         name="quiz" 
-//                         value={quizDetails[index]?.options[2]} 
-//                     />
-
-//                     <label htmlFor={quizDetails[index]?.options[2]} 
-//                         onClick={(e) => {evalAnswer(index, quizDetails[index]?.name, e.target.htmlFor)}}>
-//                         {'(C) '+ quizDetails[index]?.options[2]}
-//                     </label>
-//                 </div>
-
-//                 <div className="option-container">
-//                     <input 
-//                         type="radio" 
-//                         id={quizDetails[index]?.options[3]} 
-//                         name="quiz" 
-//                         value={quizDetails[index]?.options[3]} 
-//                     />
-
-//                     <label htmlFor={quizDetails[index]?.options[3]}
-//                         onClick={(e) => {evalAnswer(index, quizDetails[index]?.name, e.target.htmlFor)}}>
-//                         {'(D) '+ quizDetails[index]?.options[3]}
-//                     </label>
-//                 </div>
-//             </form>
-//         </div>
-//         <button className='next-button' onClick={(e) => {nextQuestion(index, quizDetails)}}>
-//               Next &gt;
-//             </button>
-//         </div>
-//   )
-// }
