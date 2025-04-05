@@ -1,11 +1,11 @@
 import './App.css'
 import {createBrowserRouter, NavLink, Route, RouterProvider, createRoutesFromElements} from 'react-router-dom'
 import CountryDetail, { countryData } from './Components/CountryDetail/CountryDetail';
-import FlagsOfCountries, { flagData } from './Pages/Flags/FlagsOfCountries';
 import FlagsLayout from './Layouts/FlagsLayout/FlagsLayout';
-import HomePage from './Pages/Homepage/HomePage';
 import Quiz from './Pages/Quiz/Quiz';
 import Layout from './Layouts/Root/Layout';
+import FlagsOfCountries from './Pages/Flags/FlagsOfCountries';
+import HomePage from './Pages/Homepage/HomePage';
 
 function App() {
   const router = createBrowserRouter(
