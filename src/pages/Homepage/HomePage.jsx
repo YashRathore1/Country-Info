@@ -10,7 +10,7 @@ export default function HomePage() {
             <div className="explore-buttons">
                 <button>
                   <NavLink to='/countries'>
-                    Discover Countries
+                    Discover Countriess
                   </NavLink>
                 </button>
                 <button>
