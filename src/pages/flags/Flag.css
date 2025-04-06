@@ -1,0 +1,55 @@
+:root{
+    --bg: #131313;
+    --white: white;
+    --greyWhite: #999999;
+    --text: #cbcbd0ef;
+    --darkgray: #06062d;
+    --border: #3f3d3d; 
+  }
+
+  .info h1{
+    margin: 20px 0 0px 0;
+  }
+
+  .info p{
+    margin: 0px 0 5px 0;
+    color: var(--text);
+  }
+
+.countryList{
+    display: flex;
+    max-width: 100vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.FlagsCard{
+    display: flex;
+    flex-flow: column;
+    margin: 10px;
+    text-decoration: none;
+    color: var(--offWhite);
+    min-width: 250px;
+    max-width: 300px;
+    gap: 10px;
+    flex: 1;
+}
+
+.countryName{
+    margin: auto;
+    font-size: 20px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+}
+
+.countryFlag{
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    min-width: 250px;
+    max-width: 300px;   
+    flex: 1;
+}
+
