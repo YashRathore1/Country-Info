@@ -83,6 +83,8 @@
     border-bottom: none;
     font-size: 17px;
     font-weight: 500;
+    color: black;
+    cursor: pointer;
 }
 
 .option-container input[type="radio" i] {
@@ -140,10 +142,9 @@
 }
 
 
-.option-container label {
-    color: black;
-    cursor: pointer;
-  }
+/* .option-container label {
+
+  } */
   
   /* style when selected */
   .option-container input[type="radio"]:checked + label {
